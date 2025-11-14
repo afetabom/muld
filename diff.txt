@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PTC Demo Avançado</title>
+  <style>
+    body { font-family: Arial; padding: 20px; max-width: 600px; margin: auto; }
+    h1 { text-align: center; }
+    #saldo { font-weight: bold; margin-bottom: 20px; display: block; text-align: center; }
+    .anuncio { border: 1px solid #ccc; padding: 15px; margin: 10px 0; cursor: pointer; background: #f9f9f9; text-align: center; }
+    .anuncio:hover { background: #e0f7fa; }
+    .anuncio:disabled { background: #ddd; cursor: not-allowed; }
+  </style>
+</head>
+<body>
+  <h1>Ganhe Créditos Assistindo Anúncios</h1>
+  <p id="saldo">Saldo: 0 créditos</p>
+  <div id="anuncios"></div>
+
+  <script>
+    // Saldo inicial
+    let saldo = parseInt(localStorage.getItem('saldo')) || 0;
+    document.getElementById('saldo').innerText = `Saldo: ${saldo} créditos`;
+
+    // Lista de anúncios simulados
+    const anunciosLista = [
+      { texto: "Anúncio 1 - Ganhe 1 crédito", credito: 1 },
+      { texto: "Anúncio 2 - Ganhe 2 créditos", credito: 2 },
+      { texto: "Anúncio 3 - Ganhe 3 créditos", credito: 3 },
+      { texto: "Anúncio
